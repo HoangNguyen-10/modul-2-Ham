@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="feet">From Feet</label>
+    <input type="number" name="" id="feet" placeholder="inputFeet" oninput="converterFeetToMeters(this.value)">
+    <p>To Meters: <span id="outputMeters"></span></p>
+    <script>
+        function converterFeetToMeters(valNum1) {
+            valNum1 = parseFloat(valNum1);
+            document.getElementById('outputMeters').innerHTML = valNum1 * 0.305
+        }
+    </script>
+
+    <label for="meters">From Meters</label>
+    <input type="number" name="" id="meters" placeholder="inputMeters" oninput="converterMetersToFeet(this.value)">
+    <p>To Feet: <span id="outputFeet"></span></p>
+
+    <script>
+        function converterMetersToFeet(valNum2) {
+            valNum2 = parseFloat(valNum2);
+            document.getElementById('outputFeet').innerHTML = valNum2 * 3.2787
+        }
+    </script>
+
+
+</body>
+
+</html>
