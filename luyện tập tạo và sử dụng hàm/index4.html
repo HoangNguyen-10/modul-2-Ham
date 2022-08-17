@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="radius">Nhập bán kính: </label>
+    <input type="text" name="" id="radius" oninput="calculateArea(this.value)">
+    <p>Diện tích hình tròn là: <span id="outputArea"></span></p>
+    <p>Chu vi hình tròn là: <span id="outputCircle"></span></p>
+    <script>
+        function calculateArea(number) {
+            let result1 = 3.14 * number * number
+            let result2 = 2 * 3.14 * number
+            document.getElementById('outputArea').innerHTML = result1
+            document.getElementById('outputCircle').innerHTML = result2
+        }
+    </script>
+</body>
+
+</html>

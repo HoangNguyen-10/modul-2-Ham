@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let a = +prompt('Mời bạn nhập số thứ nhất');
+        let b = +prompt('Mời bạn nhập số thứ hai');
+        function sumNumbers(a, b) {
+            if (a > b) {
+                alert('Số thứ hai không được nhỏ hơn số thứ nhất!');
+            } else {
+                let result = a + b;
+                return result;
+            }
+        } document.write('Tổng của hai số là: ' + sumNumbers(a, b));
+    </script>
+</body>
+
+</html>
