@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text" name="" id="input" onchange="check()">
+  <script>
+
+    function isPalindrome(str) {
+      let arr1 = str.split('');
+      let arr2 = '';
+      for (i = arr1.length - 1; i >= 0; i--) {
+        arr2 += arr1[i]
+        if (arr2==str)
+          return true;
+      } return false;
+     
+    }
+
+    function check() {
+      let a = document.getElementById('input').value;
+      let b = isPalindrome(a);
+      if (b) {
+        alert(a + ' la chuoi doi xung');
+      } else {
+        alert(a + ' khong la chuoi doi xung')
+      }
+    }
+
+  </script>
+
+
+</body>
+
+</html>
