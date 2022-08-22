@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Create new product</h1>
+    <input type="text" name="" id="newProduct">
+    <button onclick="createNewProduct()">Create</button>
+    <h1>List Product</h1>
+    <input type="text" name="" id="name">
+    <button onclick="searchByName()">Search</button>
+    <table border="1px">
+        <tr>
+            <td>Name</td>
+            <td>Edit</td>
+            <td>Delete</td>
+        </tr>
+        <tbody id="listProduct">
+
+            <tr>
+                <td>Iphone 12</td>
+                <td><button>Edit</button></td>
+                <td><button>Delete</button></td>          
+            </tr>
+            <tr>
+                <td>Iphone X</td>
+                <td><button>Edit</button></td>
+                <td><button>Delete</button></td>          
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        let listProduct=['Iphone 13','Nokia 6','Samsung galaxy','Iphone X'];
+        function showAllProduct(){
+            let content ='';
+            for(let index=0;index<listProduct.length;index++){
+                content +=`<tr>
+                <td>${listProduct[index]}</td>
+                <td><button onclick='editById(${index})'>Edit</button></td>
+                <td><button onclick='deleteById(${index})'>Delete</button></td>          
+            </tr>`
+            }
+            document.getElementById('listProduct').innerHTML=content;
+        }
+
+        showAllProduct();
+
+        function createNewProduct(){
+            let newProduct = document.getElementById('newProduct').value;
+            listProduct.push(newProduct);
+            showAllProduct();   
+        }
+
+        function deleteById(index){
+            listProduct.splice(index,1);
+            showAllProduct();
+        }
+
+        function editById(index){
+            let name = prompt('Moi ban nhap ten san pham moi',listProduct[index]);
+            listProduct[index]=name;
+            showAllProduct();
+        }
+
+        function searchByName(){
+            let name = document.getElementById('name').value;
+            for(let index=0;index<listProduct.length;index++){
+                if(listProduct[index].search(name)!=-1){
+                    let content =`<tr>
+                <td>${listProduct[index]}</td>
+                <td><button onclick='editById(${index})'>Edit</button></td>
+                <td><button onclick='deleteById(${index})'>Delete</button></td>          
+            </tr>`;
+            document.getElementById('listProduct').innerHTML=content;
+                }
+            }
+        }
+
+       
+    </script>
+</body>
+</html>

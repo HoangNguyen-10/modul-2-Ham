@@ -17,29 +17,22 @@
     <p id="result"></p>
     <script>
         function isSmallest() {
+
             let a = document.getElementById('inputA').value;
             let b = document.getElementById('inputB').value;
             let c = document.getElementById('inputC').value;
-
-
-            // if (a % 1 == 0 && b % 1 == 0 && c % 1 == 0 && b > max) {
-            //     document.getElementById('result').innerHTML = 'số nhỏ nhất là ' + b
-
-            // }
-
-            // if (a % 1 == 0 && b % 1 == 0 && c % 1 == 0 && c > max) {
-            //     document.getElementById('result').innerHTML = 'số nhỏ nhất là ' + c
-
-            // }
-
 
             if (a % 1 == 0 && b % 1 == 0 && c % 1 == 0 && a < b && a < c) {
                 document.getElementById('result').innerHTML = 'số nhỏ nhất là ' + a
             } else if (a % 1 == 0 && b % 1 == 0 && c % 1 == 0 && b < a && b < c) {
                 document.getElementById('result').innerHTML = 'số nhỏ nhất là ' + b
-            } else if(a % 1 == 0 && b % 1 == 0 && c % 1 == 0 && c < a && c < b) {
+            } else {
                 document.getElementById('result').innerHTML = 'số nhỏ nhất là ' + c
             }
+        }
+
+        function check() {
+
         }
     </script>
 </body>

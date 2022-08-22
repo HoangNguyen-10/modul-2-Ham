@@ -15,10 +15,11 @@
     <p>Chu vi hình tròn là: <span id="outputCircle"></span></p>
     <script>
         function calculateArea(number) {
-            let result1 = 3.14 * number * number
-            let result2 = 2 * 3.14 * number
-            document.getElementById('outputArea').innerHTML = result1
-            document.getElementById('outputCircle').innerHTML = result2
+            const PI = 3.14;
+            let result1 = PI * number * number;
+            let result2 = 2 * PI * number;
+            document.getElementById('outputArea').innerHTML = result1;
+            document.getElementById('outputCircle').innerHTML = result2;
         }
     </script>
 </body>

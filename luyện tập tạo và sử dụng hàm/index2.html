@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="check()">click me</button>
+    <script>
+        let arr1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let arr2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+        function switchOfStuff(val) {
+            let answer = '';
+            switch (val) {
+                case arr1[0]:
+                    answer = arr2[0];
+                    break;
+                case arr1[1]:
+                    answer = arr2[1];
+                    break;
+
+                case arr1[2]:
+                    answer = arr2[2];
+                    break;
+
+                case arr1[3]:
+                    answer = arr2[3];
+                    break;
+
+                case arr1[4]:
+                    answer = arr2[4];
+                    break;
+
+                case arr1[5]:
+                    answer = arr2[5];
+                    break;
+
+                case arr1[6]:
+                    answer = arr2[6];
+                    break;
+
+                default:
+                    answer = 'Vui lòng nhập lại tên ngôi sao';
+                    break;
+            }
+            return answer;
+        }
+      
+        function check() {
+            let a = prompt('Nhập tên ngôi sao:')
+            let b = switchOfStuff(a);
+            alert('Chòm sao tương ứng là: ' + b)
+        }
+    </script>
+</body>
+
+</html>
